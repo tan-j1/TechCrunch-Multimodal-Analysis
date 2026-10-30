@@ -1,0 +1,67 @@
+# Paths are relative to the artifact folder; OPENFACE_BINARY can set the CLI location.
+project:
+  cache_dir: cache/multimodal
+  per_video_dirname: per_video
+  log_level: INFO
+video:
+  sample_fps: 5.0
+  max_frames: null
+  resize_long_side: 640
+openface:
+  enabled: true
+  binary_path: null
+  process_fps: 5.0
+  process_resize_long_side: 640
+  tau_au12: 1.0
+  min_face_area: 2500.0
+  max_yaw_deg: 25.0
+eye_contact:
+  judge_yaw_center_deg: -35.0
+  judge_yaw_width_deg: 25.0
+pose:
+  min_kpt_vis: 0.6
+  pocket_roi:
+    width_scale: 0.6
+    height_scale: 0.6
+    y_offset_scale: 0.15
+  gesture:
+    speed_thresh: 2.0
+    min_event_gap_s: 0.4
+  openness:
+    closed_cross_x_thresh: 0.10
+    chest_y_band: [0.25, 0.65]
+audio:
+  vad:
+    silero_threshold: 0.5
+    silero_min_speech_duration_ms: 250
+    silero_min_silence_duration_ms: 100
+    pad_ms: 300
+  f0:
+    fmin: 50
+    fmax: 400
+    hop_length: 256
+    sr: 16000
+  pause:
+    min_silence_s: 0.5
+asr:
+  language: en
+  enable_diarize_in_cloud: true
+  max_retries: 3
+llm:
+  enabled: true
+  model: gpt-4o-mini
+  temperature: 0.2
+  role_classification_enabled: true
+laughter:
+  audioset_ast_model_id: MIT/ast-finetuned-audioset-10-10-0.4593
+  audioset_ast_device: auto
+  audioset_ast_window_s: 1.0
+  audioset_ast_hop_s: 0.5
+  audioset_ast_threshold: 0.1
+  audioset_ast_score_agg: sum
+  audioset_ast_top_k: 20
+  audioset_ast_min_segment_s: 0.2
+  audioset_ast_min_gap_s: 0.15
+  audioset_ast_batch_size: 8
+  post_speech_window_s: 3.0
+  audioset_ast_label_keywords: [laugh, laughter, giggle, chuckle, chortle, snicker]

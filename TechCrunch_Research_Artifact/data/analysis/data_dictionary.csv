@@ -1,0 +1,24 @@
+variable,unit,definition
+video_id,identifier,Stable video filename stem used to join processing outputs
+Company Name,text,Company associated with the pitch video
+Video Title,text,Public pitch-video title
+Video Link,URL,Public source video URL
+Alum & Event,text,Recorded event label for event-level CR1 covariance; missing labels form one Unknown group and original label spacing is retained
+Money_Usd,US dollars,Recorded archival company funding amount
+Joke_Attempt,count,Version A humor-attempt count
+Joke_Attempt_second,count,Version B humor-attempt count
+Smile_Duration_Ratio,proportion,Valid lead-speaker facial frames with OpenFace AU12 intensity > 1 / valid facial frames
+inclusive_collective_language,"0, 1, or 2","Pitch-level inclusive collective language score; 0 absent or internal/ambiguous, 1 external but generic, 2 substantive shared collective"
+Pocket_Hands_Ratio,proportion,Valid posture frames with at least one wrist in the predefined hip-region pocket area
+Hand Gesture Frequency,events per effective speaking minute,Shoulder-width-normalized wrist-speed gesture event rate
+Body_Openness,index,"Video-standardized wrist separation plus trunk inclination minus closed-posture indicator, averaged over valid lead-speaker frames"
+Eye_Contact_Ratio,proportion,Valid facial frames with head orientation inside the assumed judges-direction window
+Vocal_Pitch_Var,semitones,Standard deviation of estimated fundamental frequency converted to semitones
+Speech_Rate,words per effective speaking minute,Lead-speaker transcribed word count / effective speaking minutes
+Pause_Count,pauses per 100 words,Gaps >= 0.5 seconds between lead-speaker voice-activity intervals / transcribed words * 100
+Laughter_Duration_Ratio,duration ratio,Detected laughter in lead-speaker voice-active intervals and 3-second post-interval windows / effective speaking seconds
+overall__lead_speaking_time_s,seconds,Intersection duration of assigned lead-speaker intervals and voice-activity intervals
+Speaker_Gender,0=male; 1=female,Video-coded lead-speaker gender
+Judge_Male_Rate,proportion,Video-coded male judges / all male and female judges
+text_valid,True/False,transcript-quality eligibility flag
+api_status,success/excluded,transcript language-coding status

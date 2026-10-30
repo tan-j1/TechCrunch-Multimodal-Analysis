@@ -1,0 +1,11 @@
+{
+  "model": "gpt-4o-mini",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "message": {
+        "content": "{\"inclusive_collective_language\":1}"
+      }
+    }
+  ]
+}

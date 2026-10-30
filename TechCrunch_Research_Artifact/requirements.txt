@@ -1,0 +1,8 @@
+# Analysis and saved multimodal evidence examples (Python 3.11 or 3.12).
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+statsmodels==0.14.4
+matplotlib==3.9.2
+PyYAML>=6.0,<7
+pydantic>=2.6,<3
